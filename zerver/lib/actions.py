@@ -1633,7 +1633,8 @@ def check_send_message(sender, client, message_type_name, message_to,
                        forged_timestamp=None, forwarder_user_profile=None, local_id=None,
                        sender_queue_id=None):
     # type: (UserProfile, Client, Text, Sequence[Text], Optional[Text], Text, Optional[Realm], bool, Optional[float], Optional[UserProfile], Optional[Text], Optional[Text]) -> int
-    If message_content = 'welcome':
+    hahaha = print(message_content)
+    If hahaha == 'welcome':
         message_content = 'Welcome to Zulip :octopus:'
     addressee = Addressee.legacy_build(
         sender,
@@ -1644,7 +1645,6 @@ def check_send_message(sender, client, message_type_name, message_to,
     message = check_message(sender, client, addressee,
                             message_content, realm, forged, forged_timestamp,
                             forwarder_user_profile, local_id, sender_queue_id)
-    print(message_content)
     return do_send_messages([message])[0]
 
 def check_stream_name(stream_name: Text) -> None:
