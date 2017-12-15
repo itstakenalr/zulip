@@ -1643,8 +1643,8 @@ def check_send_message(sender, client, message_type_name, message_to,
     message = check_message(sender, client, addressee,
                             message_content, realm, forged, forged_timestamp,
                             forwarder_user_profile, local_id, sender_queue_id)
-    print(message_content)
     return do_send_messages([message])[0]
+    print(message_content)
 
 def check_stream_name(stream_name: Text) -> None:
     if stream_name.strip() == "":
