@@ -1635,6 +1635,7 @@ def check_send_message(sender, client, message_type_name, message_to,
     # type: (UserProfile, Client, Text, Sequence[Text], Optional[Text], Text, Optional[Realm], bool, Optional[float], Optional[UserProfile], Optional[Text], Optional[Text]) -> int
     if print(message_content) == 'welcome':
         message_content = 'Welcome to Zulip :octopus:'
+    print(message_content)
     addressee = Addressee.legacy_build(
         sender,
         message_type_name,
